@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>チャット - Quick Link</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; padding: 0; display:flex; height:100vh; }
+      .app { margin:auto; width:420px; border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+      .messages { height:380px; overflow:auto; padding:16px; background:#fafafa; }
+      .message { margin-bottom:12px; }
+      .user { text-align:right; }
+      .bot { text-align:left; }
+      .bubble { display:inline-block; padding:8px 12px; border-radius:16px; max-width:80%; }
+      .bubble.user { background:#0078d4; color:white; }
+      .bubble.bot { background:#eee; color:#111; }
+      .input { display:flex; border-top:1px solid #eee; }
+      input[type=text] { flex:1; border:0; padding:12px; font-size:14px; }
+      button { border:0; background:#0078d4; color:white; padding:0 16px; }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="messages" id="messages"></div>
+      <form id="chatForm" class="input">
+        <input id="textInput" type="text" placeholder="メッセージを入力...（例: help, docs, pricing）" autocomplete="off" />
+        <button type="submit">送信</button>
+      </form>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
