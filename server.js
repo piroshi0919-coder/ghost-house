@@ -52,10 +52,11 @@ function generateReply(message) {
 
   // Require at least 3 distinct trigger words to 'pass'
   if (matched.length >= 3) {
-    // When 3+ keywords match, return the PDF URL for the "第一幽霊の過去.pdf"
+    // When 3+ keywords match, return the PDF URL.
+    // Use an ASCII-safe filename to avoid encoding issues on some hosts.
     const reply = '有難うございます。過去の資料にこちらがございました。もしかしたら何かの手掛かりになるかもしれません。';
-    // serve the PDF from /files/<filename>
-    return { reply, url: '/files/第一幽霊の過去.pdf', matched };
+    // serve the PDF from /files/<ascii-filename>
+    return { reply, url: '/files/daiichi_yuurei_no_kako.pdf', matched };
   }
 
   if (matched.length > 0) {
