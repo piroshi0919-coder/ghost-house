@@ -6,8 +6,8 @@
     <title>チャット - Quick Link</title>
     <style>
       body { font-family: system-ui, sans-serif; margin: 0; padding: 0; display:flex; height:100vh; }
-      .app { margin:auto; width:420px; border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
-      .messages { height:380px; overflow:auto; padding:16px; background:#fafafa; }
+      .app { margin:auto; width:720px; border:1px solid #ddd; border-radius:8px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+      .messages { height:520px; overflow:auto; padding:16px; background:#fafafa; }
       .message { margin-bottom:12px; }
       .user { text-align:right; }
       .bot { text-align:left; }
@@ -21,6 +21,10 @@
   </head>
   <body>
     <div class="app">
+      <div id="serverNotice" style="background:#fff3cd;border-left:4px solid #ffd54f;padding:10px 12px;font-size:13px;color:#333;display:none;">
+        <strong>注意:</strong> バックエンドに接続できません。下のリンクで同じサーバーから開いてください:
+        <a id="openBackendLink" href="#" target="_blank" rel="noopener noreferrer">http://localhost:3000</a>
+      </div>
       <div class="messages" id="messages"></div>
       <form id="chatForm" class="input">
         <input id="textInput" type="text" placeholder="メッセージを入力...（例: help, docs, pricing）" autocomplete="off" />

@@ -1,0 +1,9 @@
+node_modules
+logs
+.git
+.gitignore
+server.run.log
+*.log
+tmp
+dist
+coverage

@@ -4,12 +4,16 @@
   "description": "Simple chat web app that returns URLs for trigger words",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "live": "npx live-server public --port=5500",
+    "forever": "bash scripts/forever.sh",
+    "tunnel": "bash scripts/tunnel.sh"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pm2": "^6.0.13"
   }
 }
